@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;"/>
+    <meta charset="utf-8">
+
+    <style type="text/css" media="screen">@import "js/lib/jqtouch/jqtouch.css";</style>
+    <style type="text/css" media="screen">@import "css/themes/jqt/theme.css";</style>
+    <style type="text/css" media="screen">@import "css/main.css";</style>
+
+    <script src="js/lib/LAB.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $LAB.script("js/lib/jqtouch/jquery-1.4.2.min.js").wait()
+                .script("js/lib/jquery.tmpl.min.js")
+                .script("js/lib/jqtouch/jqtouch.js")
+                .script("js/lib/cordova.js")    // this should be your cordova-js own build
+                .script("js/lib/sammy/sammy.min.js")
+                .script("plugins/org.wumengye.cordova.plugin.videoplayer/www/video-player.js") // this should be the plugin registration js after plugin installation
+                .script("js/app/main.js")
+    </script>
+</head>
+
+<body>
+
+<!-- application templates -->
+<script type="text/x-jquery-tmpl" id="info-template">
+    <span>${getInfo()}</span>
+</script>
+
+<!-- application UI interface -->
+<div id="jqt">
+    <div id="start">
+        <div class="toolbar">
+            <h1>Video List</h1>
+        </div>
+        <ul class="rounded">
+            <li><a href="#video1" class="pop">Local Video</a>
+                <small class="counter">1</small>
+            </li>
+        </ul>
+        <ul class="rounded">
+            <li><a href="#video2" class="swap">Remote Video</a>
+                <small class="counter">1</small>
+            </li>
+        </ul>
+        <ul class="rounded">
+            <li><a href="#/info"><span id="info">info</span></a>
+                <small class="counter">3</small>
+            </li>
+        </ul>
+
+    </div>
+    <div id="video1" class="notransform">
+        <div class="toolbar">
+            <h1 id="status">Local Video</h1>
+            <a href="#" class="back">Back</a>
+        </div>
+        <ul class="rounded">
+            <li>
+                <a href="#/play1">play</a>
+            </li>
+        </ul>
+    </div>
+    <div id="video2" class="notransform">
+        <div class="toolbar">
+            <h1 id="status">Remote Video</h1>
+            <a href="#" class="back">Back</a>
+        </div>
+        <ul class="rounded">
+            <li>
+                <a href="#/play2">play</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
