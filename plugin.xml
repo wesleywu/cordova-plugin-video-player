@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="org.wumengye.cordova.plugin.videoplayer"
+	      version="0.1.0">
+
+	<name>VideoPlayer</name>
+	<description>Cordova Video Player Plugin</description>
+	<license>Apache 2.0</license>
+	<keywords>cordova, videoplayer, video player</keywords>
+
+	<!-- ios -->
+	<platform name="ios">
+
+		<config-file target="config.xml" parent="/*">
+			<feature name="VideoPlayer">
+				<param name="ios-package" value="VideoPlayer"/>
+			</feature>
+		</config-file>
+
+		<js-module src="www/video-player.js" name="console">
+			<clobbers target="console" />
+		</js-module>
+
+		<header-file src="src/ios/MovieViewController.h" />
+		<header-file src="src/ios/VideoPlayerCommand.h" />
+		<source-file src="src/ios/MovieViewController.m" />
+		<source-file src="src/ios/VideoPlayerCommand.m" />
+
+	</platform>
+
+</plugin>
