@@ -22,10 +22,10 @@
 			<clobbers target="console" />
 		</js-module>
 
-		<header-file src="src/ios/MovieViewController.h" />
-		<header-file src="src/ios/VideoPlayerCommand.h" />
-		<source-file src="src/ios/MovieViewController.m" />
-		<source-file src="src/ios/VideoPlayerCommand.m" />
+		<header-file src="src/MovieViewController.h" />
+		<header-file src="src/VideoPlayerCommand.h" />
+		<source-file src="src/MovieViewController.m" />
+		<source-file src="src/VideoPlayerCommand.m" />
 
 	</platform>
 
